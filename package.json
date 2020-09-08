@@ -7,13 +7,21 @@
   "nativescript": {
     "id": "org.nativescript.uuid",
     "platforms": {
-      "ios": "1.3.0",
-      "android": "1.3.0"
+      "android": "6.5.0",
+      "ios": "6.5.0"
     }
+  },
+  "scripts": {
+    "tsc": "npm i && tsc"
+  },
+  "devDependencies": {
+    "@nativescript/core": "6.5.15",
+    "tns-platform-declarations": "6.5.15",
+    "typescript": "~4.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gdtdpt/nativescript-uuid.git"
+    "url": "https://github.com/andreacappadona17/nativescript-uuid.git"
   },
   "keywords": [
     "NativeScript",

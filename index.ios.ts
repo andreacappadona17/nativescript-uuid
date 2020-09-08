@@ -1,14 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getUUID = void 0;
-function getUUID() {
+declare const SAMKeychain: any;
+
+export function getUUID() {
     var appName = NSBundle.mainBundle.infoDictionary.objectForKey(kCFBundleNameKey);
     var strApplicationUUID = SAMKeychain.passwordForServiceAccount(appName, "incoding");
-    if (!strApplicationUUID) {
+    if (!strApplicationUUID){
         strApplicationUUID = UIDevice.currentDevice.identifierForVendor.UUIDString;
         SAMKeychain.setPasswordForServiceAccount(strApplicationUUID, appName, "incoding");
     }
+
     return strApplicationUUID;
 }
-exports.getUUID = getUUID;
-//# sourceMappingURL=index.ios.js.map
